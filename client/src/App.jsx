@@ -13,20 +13,20 @@ import Checkout from './pages/Checkout/Checkout'
 import Login from './pages/Login/Login'
 import Register from './pages/Register/Register'
 import AdminDashboard from './pages/Admin/Dashboard'
+import AdminProducts from './pages/Admin/Products'
+import AdminDeals from './pages/Admin/Deals'
 import Navbar from './components/Navbar/Navbar'
 import Chatbot from './components/Chatbot/Chatbot'
+import AnnouncementBar from './components/AnnouncementBar/AnnouncementBar'
 import { AuthProvider } from './context/AuthContext'
 import { CartProvider } from './context/CartContext'
 
 function App() {
-  console.log('📦 App Component Initializing...');
   const [loading, setLoading] = useState(true)
   const location = useLocation()
 
   useEffect(() => {
-    console.log('🔄 Starting Preloader Timer...');
     const timer = setTimeout(() => {
-      console.log('🏁 Preloader Complete, mounting App content...');
       setLoading(false)
     }, 3000)
     return () => clearTimeout(timer)
@@ -34,14 +34,17 @@ function App() {
 
   if (loading) return <Preloader />
 
+  const isAdminRoute = location.pathname.startsWith('/admin')
+
   return (
     <AuthProvider>
       <CartProvider>
         <div className="bakestro-app">
           <Toaster position="top-center" reverseOrder={false} />
           
-          {!location.pathname.startsWith('/admin') && (
+          {!isAdminRoute && (
             <>
+              <AnnouncementBar />
               <Header />
               <Navbar />
             </>
@@ -58,11 +61,13 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
               <Route path="/admin" element={<AdminDashboard />} />
+              <Route path="/admin/products" element={<AdminProducts />} />
+              <Route path="/admin/deals" element={<AdminDeals />} />
             </Routes>
           </main>
 
-          {!location.pathname.startsWith('/admin') && <Footer />}
-          {!location.pathname.startsWith('/admin') && <Chatbot />}
+          {!isAdminRoute && <Footer />}
+          {!isAdminRoute && <Chatbot />}
         </div>
       </CartProvider>
     </AuthProvider>

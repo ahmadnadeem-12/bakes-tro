@@ -9,7 +9,9 @@ const productSchema = new mongoose.Schema({
   rating: { type: Number, default: 4.5 },
   isFeatured: { type: Boolean, default: false },
   inStock: { type: Boolean, default: true },
-  createdAt: { type: Date, default: Date.now }
+  pricingUnit: { type: String, enum: ['piece', 'kg', 'box', 'dozen'], default: 'piece' },
+  createdAt: { type: Date, default: Date.now },
+  updatedAt: { type: Date, default: Date.now }
 });
 
 module.exports = mongoose.model('Product', productSchema);

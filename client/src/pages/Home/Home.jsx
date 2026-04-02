@@ -7,6 +7,10 @@ import 'swiper/css/pagination'
 import { HERO_SLIDES } from '../../constants/data'
 import { productAPI } from '../../services/api'
 import ProductCard from '../../components/ProductCard/ProductCard'
+import DealsSection from '../../components/DealsSection/DealsSection'
+import WhyChooseUs from '../../components/WhyChooseUs/WhyChooseUs'
+import Testimonials from '../../components/Testimonials/Testimonials'
+import Newsletter from '../../components/Newsletter/Newsletter'
 import './Home.css'
 
 const Home = () => {
@@ -29,6 +33,7 @@ const Home = () => {
 
   return (
     <div className="home">
+
       {/* Hero Section */}
       <section className="hero">
         <Swiper
@@ -58,7 +63,10 @@ const Home = () => {
         </Swiper>
       </section>
 
-      {/* Categories / Deals Section */}
+      {/* Deals Section */}
+      <DealsSection />
+
+      {/* Featured Products Section */}
       <section className="featured-section container">
         <h2 className="section-title">Freshly Baked Essentials</h2>
         <p className="section-subtitle">Experience the authentic taste of Faisalabad's finest bakery.</p>
@@ -81,6 +89,15 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* Why Choose Us Section */}
+      <WhyChooseUs />
+
+      {/* Testimonials Section */}
+      <Testimonials />
+
+      {/* Newsletter Section */}
+      <Newsletter />
     </div>
   )
 }
