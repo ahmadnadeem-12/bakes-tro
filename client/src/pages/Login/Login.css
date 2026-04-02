@@ -1,0 +1,115 @@
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 50px 0;
+}
+
+.login-container {
+  max-width: 450px;
+  width: 100%;
+  padding: 50px;
+  background-color: var(--white);
+  text-align: center;
+}
+
+.login-logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  box-shadow: var(--clay-shadow);
+}
+
+.login-header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.login-header p {
+  color: var(--secondary);
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.login-form {
+  text-align: left;
+}
+
+.login-form .form-group {
+  margin-bottom: 20px;
+}
+
+.input-with-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-with-icon svg {
+  position: absolute;
+  left: 15px;
+  color: var(--primary);
+  opacity: 0.6;
+}
+
+.input-with-icon input {
+  width: 100%;
+  padding: 15px 15px 15px 45px;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 12px;
+  background: var(--background);
+  box-shadow: var(--shadow-inset);
+  outline: none;
+  font-family: 'Outfit', sans-serif;
+}
+
+.input-with-icon input:focus {
+  border-color: var(--primary);
+  background: var(--white);
+}
+
+.toggle-password {
+  position: absolute;
+  right: 15px;
+  background: none;
+  color: var(--text);
+  font-size: 1.1rem;
+}
+
+.forgot-password {
+  text-align: right;
+  margin-bottom: 30px;
+}
+
+.forgot-password a {
+  font-size: 0.9rem;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.1rem;
+}
+
+.login-footer {
+  margin-top: 30px;
+}
+
+.login-footer p {
+  color: var(--text);
+}
+
+.login-footer a {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+@media (max-width: 480px) {
+  .login-container {
+    padding: 30px 20px;
+  }
+}

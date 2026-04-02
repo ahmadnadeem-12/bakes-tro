@@ -1,0 +1,123 @@
+.home {
+  padding-bottom: 50px;
+}
+
+.hero {
+  height: 80vh;
+  margin-bottom: 60px;
+}
+
+.hero-swiper {
+  height: 100%;
+}
+
+.hero-slide {
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.hero-content {
+  text-align: center;
+  color: var(--white);
+  padding: 0 40px;
+}
+
+.hero-tagline {
+  font-size: 1.5rem;
+  letter-spacing: 3px;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.hero-title {
+  font-size: 4.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+
+.hero-cta {
+  padding: 15px 40px;
+  font-size: 1.2rem;
+}
+
+/* Featured Section */
+.section-title {
+  font-size: 2.8rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--primary);
+  margin-bottom: 4rem;
+  font-size: 1.1rem;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* Ad Section */
+.ad-section {
+  margin-top: 80px;
+}
+
+.ad-card-container {
+  display: flex;
+  padding: 40px;
+  align-items: center;
+  gap: 40px;
+  background: var(--white);
+}
+
+.ad-card-image {
+  width: 450px;
+  border-radius: var(--radius);
+  box-shadow: var(--clay-shadow);
+}
+
+.ad-content {
+  flex: 1;
+}
+
+.ad-content h3 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.ad-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: var(--text);
+}
+
+@media (max-width: 1024px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 60vh;
+  }
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  .ad-card-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .ad-card-image {
+    width: 100%;
+  }
+}

@@ -1,0 +1,51 @@
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.preloader-contentContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.preloader-logo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  box-shadow: var(--clay-shadow);
+}
+
+.preloader-progressContainer {
+  width: 250px;
+  height: 12px;
+  background: var(--white);
+  border-radius: 20px;
+  box-shadow: var(--shadow-inset);
+  overflow: hidden;
+  position: relative;
+}
+
+.preloader-progressBar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(139, 69, 19, 0.4);
+}
+
+.preloader-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  color: var(--primary);
+  font-weight: 600;
+  letter-spacing: 1px;
+}

@@ -1,0 +1,168 @@
+.about {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.about-hero {
+  margin-bottom: 100px;
+}
+
+.about-title {
+  font-size: 3.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.about-subtitle {
+  text-align: center;
+  font-size: 1.3rem;
+  color: var(--primary);
+  margin-bottom: 4rem;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.about-image-container {
+  padding: 30px;
+}
+
+.about-image {
+  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: var(--clay-shadow);
+}
+
+.about-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: var(--text);
+}
+
+.about-stats {
+  display: flex;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.stat-item {
+  flex: 1;
+  text-align: center;
+}
+
+.stat-item h3 {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 5px;
+}
+
+.stat-item p {
+  font-size: 0.9rem;
+  color: var(--secondary);
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+/* Chef Section */
+.chef-section {
+  padding: 60px;
+  margin-top: 50px;
+  background-color: var(--white);
+}
+
+.chef-content {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+}
+
+.chef-info {
+  flex: 1.5;
+}
+
+.chef-label {
+  display: inline-block;
+  padding: 5px 15px;
+  background-color: var(--accent);
+  color: var(--primary);
+  border-radius: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+}
+
+.chef-info h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.chef-bio {
+  font-size: 1.2rem;
+  color: var(--text);
+  margin-bottom: 30px;
+  font-style: italic;
+}
+
+.chef-specialities {
+  list-style: none;
+}
+
+.chef-specialities li {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  position: relative;
+  padding-left: 30px;
+}
+
+.chef-specialities li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+  font-weight: bold;
+}
+
+.chef-image-wrapper {
+  flex: 1;
+}
+
+.chef-image {
+  width: 100%;
+  border-radius: 50%;
+  border: 15px solid var(--accent);
+  box-shadow: var(--clay-shadow);
+}
+
+@media (max-width: 1024px) {
+  .chef-content {
+     gap: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .chef-content {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .chef-info {
+    order: 2;
+  }
+  .chef-image-wrapper {
+    order: 1;
+    width: 60%;
+    margin: 0 auto;
+  }
+}

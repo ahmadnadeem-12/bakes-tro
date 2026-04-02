@@ -1,0 +1,24 @@
+yar sab sye pehla tou is ka UI/UX design sahi karo yani k esa modern bnao or smooth transition lgao is mye
+us k bad top par bareek c pati chlni chahea as a note ke surat ma jis mye 2 sye 3 note likha hoon or wo slide ho kar right sye left ko jaye or chlti raha 
+us k bad ya jo Bakestro logo k sath likha ha is ka font family b acha sa lgao ya timesnewroman tou blkl b acha nae lag rha 
+us k bad carousal ma aik video b lgani ha bina awaz k jo sirf chand second tak chla phir next images use carousal ma show hona lag jaye video ko website load hona par show karwana ha yani k pehla video he show ho .. or jo carousal ma blue dot ha us ka color according to website karo irrelevant color add na karo
+us k bad ya jo navbar show ho rhi hain jis ma multiple tabs hain ya carousel k nicha karo 
+phir jesa he scroll down karain tou jo carousal ha wo sticky raha or jo navbar ha wo upar ko move hoo or upar ja kar wo login wali navbar k nicha ja kar atak jaye or nicha wala page nicha sye slide ho kar upar ajaye ya effect lgana ha 
+phir ya jo products add hue hain in ke category b create karo aik tabs ke surat ma as a bar show hoo yani sari updates wali tab all products jinhain kah lain phir nankhatai ,, phir cake ya cupcake phir biscuits phir brownies phir esa he show karwao 
+
+us k bad products par ajata hain is ma jo picture ka size ha usa chota kro ta k aik fresh look tou nazar aya itna bara mujha nae chahea images acha images wala boxes ma ya b add karna ha k kitna rupees per kg ha cheez ya kitna rupees k kitna pcs hain in ke access admin dashboard par dye do k wo chahea tou pcs rakh lye ya measurement rakh dye phir wishlist ma use k add kro jis nye login kea hua ha acha phr Jahan name likha ha us k nicha description b tou likho k product ha kya thori c likh do aga read more wala link add kardo jab customer us par click kara tou product open ho proper us ke pricing aya - or + wala option b appear ho phir descitpion aya jis mye likha ho k product kesa bnaye gae ha kya kya material use hua ha is mye ys iss lea k customer satisfy ho fazool transition ko remove kar dena beshak Jahan sae na laga .. or Jahan zrurat ho wahan add kar dena  aik row ma atleast 4 products show hoon 
+phir jo nicha deals wala show ho rha ha mena us ma pumphlit show nahi karwana balka us ko deals wala section ma rakho jis mye products par deal lagi ho 4 sye 5 products ko mila k jo k user khud add kar skta ha admin dashboard ma
+
+is k ilawa footer ke height ko kam karo or isa proper align karo ta k achay sye show tou ho Newsletter ke jagha kuch or add karo kiun k ya website normal business owner k lea ha na k aik bari organization k lea  footer ma location wala add kro yani jesa contact ma show ho rhi ha wesa he footer ma chota sye box ma show ho rhi ho proper 
+
+ab ajao about section ma chef ka name Sadaf bari ha or image ke jagha larki wa dimi profile add kardo yani female wala or CEO b Wahi ha 
+
+contact wala section ma location ka icon phone number ka icon email address ka icon phir phone number k nicha he likh lagana WhatsApp ma chat k lea 
+
+or jo chatbot ha us k andar b proper maintainance kro grokapi ke jagha chor do wo ma dye doon ga baki train kardo model ko k wo user ko products pehla show karwaye jesa jesa user kahta ha phir order leta waqt us ke full detail lye yani us ka name phone number location proper phir us ko btaye k hamari team ap sye jldi he contact kara ge or jo data lea ha us ko aik excel sheet ma store b kara or admin dashboard par b foran dekhaye k aik order add ho gya ha complete product detail k sath or customer detail + quantity and price wagera har cheez compulsory la kar he order confirm karn ha or wahi order customer ko cart ma b show hooo 
+
+ab ajao very important commands par 
+sab sye pehla tou focus karna ha k website mobile responsiveness hoo proper hamburg wala show hona lag jaye jesa he mobile par kholain navbar ke jagha or jo note likha ho ga wo b wesa he show hona lag jaye or esa he har tab proper tarika sye responsive ho 
+
+phir bat ajati ha admin dashboard ke ya sab sye important hisa ha admin dashboard proper credential k sath sign in ho or us ma har tab ka alag section bana ho or agr new tab create karna ha tou us ka b section ho phir tabs k andar jo products add krni pricing desctiption detail perkg or measurments k according jesa b admin chaha phir note ko adit karna carousal ke andar jo picture wagera lagani us ka section hor or ya video lagani us ka section ho 
+ya proper SEO k sath website bnanai ha is mye SEO k kewords ka khial rakhna ha SKU wagera jo b units use hota hain sab ka jo k search engine optimization ma madad deta hain 

@@ -1,0 +1,129 @@
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 1rem 0;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.header-logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: var(--clay-shadow);
+}
+
+.header-brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: 1px;
+}
+
+.header-socials {
+  display: flex;
+  gap: 1rem;
+}
+
+.header-socialIcon {
+  font-size: 1.2rem;
+  color: var(--primary);
+  background: var(--white);
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: var(--clay-shadow);
+  transition: var(--transition);
+}
+
+.header-socialIcon:hover {
+  transform: translateY(-3px);
+  color: var(--secondary);
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.header-divider {
+  width: 2px;
+  height: 30px;
+  background: var(--accent);
+  opacity: 0.3;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.header-actionLink, .header-cartContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 8px 15px;
+  border-radius: var(--radius);
+  background: var(--white);
+  box-shadow: var(--clay-shadow);
+  font-weight: 600;
+  color: var(--primary);
+  font-size: 0.9rem;
+}
+
+.header-actionLink:hover, .header-cartContainer:hover {
+  transform: translateY(-2px);
+  color: var(--secondary);
+}
+
+.header-cartContainer {
+  position: relative;
+}
+
+.header-cartBadge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: var(--primary);
+  color: var(--white);
+  font-size: 0.7rem;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .header-brand {
+    display: none;
+  }
+  .header-socials {
+    display: none;
+  }
+  .header-divider {
+    display: none;
+  }
+  .header-cartLabel, .header-actionLink span {
+    display: none;
+  }
+}
