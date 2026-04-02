@@ -16,9 +16,9 @@ const getProductById = async (req, res) => {
 };
 
 const createProduct = async (req, res) => {
-  const { name, price, description, image, category, rating, isFeatured } = req.body;
+  const { name, price, description, image, category, rating, isFeatured, pricingUnit } = req.body;
   const product = new Product({
-    name, price, description, image, category, rating, isFeatured
+    name, price, description, image, category, rating, isFeatured, pricingUnit
   });
 
   const createdProduct = await product.save();
@@ -26,7 +26,7 @@ const createProduct = async (req, res) => {
 };
 
 const updateProduct = async (req, res) => {
-  const { name, price, description, image, category, rating, isFeatured } = req.body;
+  const { name, price, description, image, category, rating, isFeatured, pricingUnit } = req.body;
   const product = await Product.findById(req.params.id);
 
   if (product) {
@@ -37,6 +37,8 @@ const updateProduct = async (req, res) => {
     product.category = category || product.category;
     product.rating = rating || product.rating;
     product.isFeatured = isFeatured || product.isFeatured;
+    product.pricingUnit = pricingUnit || product.pricingUnit;
+    product.updatedAt = Date.now();
 
     const updatedProduct = await product.save();
     res.json(updatedProduct);

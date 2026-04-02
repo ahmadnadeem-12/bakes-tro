@@ -29,11 +29,15 @@ app.get('/', (req, res) => {
 const authRoutes = require('./routes/authRoutes');
 const productRoutes = require('./routes/productRoutes');
 const orderRoutes = require('./routes/orderRoutes');
+const dealRoutes = require('./routes/dealRoutes');
+const announcementRoutes = require('./routes/announcementRoutes');
 
 // Use Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/products', productRoutes);
 app.use('/api/orders', orderRoutes);
+app.use('/api/deals', dealRoutes);
+app.use('/api/announcements', announcementRoutes);
 
 app.listen(PORT, () => {
   console.log(`🚀 Server running on port ${PORT}`);

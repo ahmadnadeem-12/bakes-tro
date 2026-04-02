@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { FaThLarge, FaBox, FaShoppingCart, FaUsers, FaChartLine, FaSignOutAlt } from 'react-icons/fa'
+import { FaThLarge, FaBox, FaShoppingCart, FaUsers, FaChartLine, FaSignOutAlt, FaRectangleList } from 'react-icons/fa'
 import { orderAPI, productAPI } from '../../services/api'
 import { toast } from 'react-hot-toast'
 import './Dashboard.css'
@@ -48,7 +48,7 @@ const AdminDashboard = () => {
            <h2>Admin</h2>
         </div>
         <nav className="admin-nav">
-          <Link to="/admin" className="admin-nav-item active"><FaLayout /> Overview</Link>
+          <Link to="/admin" className="admin-nav-item active"><FaRectangleList /> Overview</Link>
           <Link to="/admin/products" className="admin-nav-item"><FaBox /> Products</Link>
           <Link to="/admin/orders" className="admin-nav-item"><FaShoppingCart /> Orders</Link>
           <Link to="/admin/users" className="admin-nav-item"><FaUsers /> Customers</Link>
