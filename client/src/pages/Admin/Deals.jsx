@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { FaTag, FaEdit, FaTrash, FaPlus, FaSignOutAlt, FaRectangleList, FaShoppingCart, FaUsers, FaBox } from 'react-icons/fa'
+import { FaTag, FaEdit, FaTrash, FaPlus, FaSignOutAlt, FaShoppingCart, FaUsers, FaBox } from 'react-icons/fa'
+import { FaRectangleList } from 'react-icons/fa6'
 import { toast } from 'react-hot-toast'
 import './Deals.css'
 

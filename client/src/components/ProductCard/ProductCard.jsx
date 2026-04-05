@@ -9,34 +9,57 @@ const ProductCard = ({ product }) => {
   const { addToCart } = useCart();
   const [isWishlisted, setIsWishlisted] = useState(false);
 
+  const unitLabels = {
+    pc: '/pc',
+    kg: '/kg',
+    box: '/box',
+    dozen: '/dz',
+    piece: '/pc'
+  };
+
+  const unitLabel = unitLabels[product.pricingUnit] || '';
+
   return (
     <motion.div 
       className="product-card clay-card"
-      whileHover={{ y: -10 }}
-      transition={{ duration: 0.3 }}
+      whileHover={{ y: -8 }}
+      transition={{ duration: 0.3, ease: "easeOut" }}
     >
       <div className="product-imageContainer">
-        <img src={product.image} alt={product.name} className="product-image" />
+        <Link to={`/product/${product._id}`}>
+          <img src={product.image} alt={product.name} className="product-image" loading="lazy" />
+        </Link>
         <button 
           className="product-wishlistBtn" 
           onClick={() => setIsWishlisted(!isWishlisted)}
+          aria-label="Add to wishlist"
         >
           {isWishlisted ? <FaHeart className="wishlist-active" /> : <FaRegHeart />}
         </button>
+        {product.discount && (
+          <div className="product-discount-badge">-{product.discount}%</div>
+        )}
       </div>
 
       <div className="product-info">
-        <div className="product-category">{product.category}</div>
         <Link to={`/product/${product._id}`} className="product-name">
           <h3>{product.name}</h3>
         </Link>
-        <div className="product-price">Rs. {product.price.toLocaleString()}</div>
+        
+        <div className="product-price-row">
+          <span className="product-price">Rs. {product.price?.toLocaleString()}</span>
+          <span className="product-unit">{unitLabel}</span>
+        </div>
+        
+        {product.description && (
+          <p className="product-description">{product.description.substring(0, 70)}...</p>
+        )}
         
         <button 
-          className="product-addBtn clay-button"
+          className="product-addBtn"
           onClick={() => addToCart(product, 1)}
         >
-          <FaShoppingCart /> Add to Cart
+          <FaShoppingCart /> Add to Tray
         </button>
       </div>
     </motion.div>

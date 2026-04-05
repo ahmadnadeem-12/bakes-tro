@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(cors());
-app.use(express.json());
+app.use(express.json({ limit: '10mb' }));
 
 // Database Connection
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/bakestro';
@@ -31,6 +31,8 @@ const productRoutes = require('./routes/productRoutes');
 const orderRoutes = require('./routes/orderRoutes');
 const dealRoutes = require('./routes/dealRoutes');
 const announcementRoutes = require('./routes/announcementRoutes');
+const chatRoutes = require('./routes/chatRoutes');
+const categoryRoutes = require('./routes/categoryRoutes');
 
 // Use Routes
 app.use('/api/auth', authRoutes);
@@ -38,6 +40,17 @@ app.use('/api/products', productRoutes);
 app.use('/api/orders', orderRoutes);
 app.use('/api/deals', dealRoutes);
 app.use('/api/announcements', announcementRoutes);
+app.use('/api/chat', chatRoutes);
+app.use('/api/categories', categoryRoutes);
+
+// Serve exports folder for downloads
+app.use('/exports', express.static(path.join(__dirname, 'exports')));
+
+// Error handler
+app.use((err, req, res, next) => {
+  console.error('Server Error:', err);
+  res.status(500).json({ message: 'Internal Server Error', error: err.message });
+});
 
 app.listen(PORT, () => {
   console.log(`🚀 Server running on port ${PORT}`);

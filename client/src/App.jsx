@@ -12,14 +12,28 @@ import Cart from './pages/Cart/Cart'
 import Checkout from './pages/Checkout/Checkout'
 import Login from './pages/Login/Login'
 import Register from './pages/Register/Register'
+import Category from './pages/Category/Category'
 import AdminDashboard from './pages/Admin/Dashboard'
 import AdminProducts from './pages/Admin/Products'
 import AdminDeals from './pages/Admin/Deals'
+import AdminOrders from './pages/Admin/Orders'
+import AdminCategories from './pages/Admin/Categories'
+import AdminAnnouncements from './pages/Admin/Announcements'
+import AdminCarousel from './pages/Admin/CarouselManager'
 import Navbar from './components/Navbar/Navbar'
 import Chatbot from './components/Chatbot/Chatbot'
 import AnnouncementBar from './components/AnnouncementBar/AnnouncementBar'
 import { AuthProvider } from './context/AuthContext'
 import { CartProvider } from './context/CartContext'
+import './App.css'
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+}
 
 function App() {
   const [loading, setLoading] = useState(true)
@@ -28,7 +42,7 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false)
-    }, 3000)
+    }, 2500)
     return () => clearTimeout(timer)
   }, [])
 
@@ -40,7 +54,19 @@ function App() {
     <AuthProvider>
       <CartProvider>
         <div className="bakestro-app">
-          <Toaster position="top-center" reverseOrder={false} />
+          <Toaster 
+            position="top-center" 
+            reverseOrder={false}
+            toastOptions={{
+              style: {
+                borderRadius: '12px',
+                background: '#3E1F0D',
+                color: '#fff',
+                fontFamily: 'Outfit, sans-serif'
+              }
+            }}
+          />
+          <ScrollToTop />
           
           {!isAdminRoute && (
             <>
@@ -54,15 +80,22 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/product/:id" element={<ProductDetail />} />
+              <Route path="/category/:categoryId" element={<Category />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/cart" element={<Cart />} />
               <Route path="/checkout" element={<Checkout />} />
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
+              
+              {/* Admin Routes */}
               <Route path="/admin" element={<AdminDashboard />} />
               <Route path="/admin/products" element={<AdminProducts />} />
               <Route path="/admin/deals" element={<AdminDeals />} />
+              <Route path="/admin/orders" element={<AdminOrders />} />
+              <Route path="/admin/categories" element={<AdminCategories />} />
+              <Route path="/admin/announcements" element={<AdminAnnouncements />} />
+              <Route path="/admin/carousel" element={<AdminCarousel />} />
             </Routes>
           </main>
 

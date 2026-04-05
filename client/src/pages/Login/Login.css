@@ -15,92 +15,108 @@
 }
 
 .login-logo {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   box-shadow: var(--clay-shadow);
 }
 
 .login-header h1 {
-  font-size: 2.2rem;
-  margin-bottom: 10px;
+  font-size: 2rem;
+  margin-bottom: 8px;
 }
 
 .login-header p {
-  color: var(--secondary);
+  color: var(--text-light);
   font-weight: 500;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
 }
 
+/* Google Login Section */
+.google-login-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.google-login-section > div {
+  width: 100%;
+}
+
+.login-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.login-divider::before,
+.login-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: rgba(139, 69, 19, 0.1);
+}
+
+.login-divider span {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+/* Form */
 .login-form {
   text-align: left;
 }
 
 .login-form .form-group {
-  margin-bottom: 20px;
-}
-
-.input-with-icon {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-.input-with-icon svg {
-  position: absolute;
-  left: 15px;
-  color: var(--primary);
-  opacity: 0.6;
-}
-
-.input-with-icon input {
-  width: 100%;
-  padding: 15px 15px 15px 45px;
-  border: 1px solid rgba(0,0,0,0.1);
-  border-radius: 12px;
-  background: var(--background);
-  box-shadow: var(--shadow-inset);
-  outline: none;
-  font-family: 'Outfit', sans-serif;
-}
-
-.input-with-icon input:focus {
-  border-color: var(--primary);
-  background: var(--white);
+  margin-bottom: 18px;
 }
 
 .toggle-password {
   position: absolute;
-  right: 15px;
+  right: 14px;
   background: none;
-  color: var(--text);
-  font-size: 1.1rem;
+  color: var(--text-muted);
+  font-size: 1rem;
+  padding: 0;
 }
 
 .forgot-password {
   text-align: right;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
 }
 
 .forgot-password a {
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   color: var(--primary);
   font-weight: 600;
 }
 
+.forgot-password a:hover {
+  text-decoration: underline;
+}
+
 .login-btn {
   width: 100%;
-  padding: 15px;
-  font-size: 1.1rem;
+  padding: 14px;
+  font-size: 1.05rem;
+}
+
+.login-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
 }
 
 .login-footer {
-  margin-top: 30px;
+  margin-top: 24px;
 }
 
 .login-footer p {
-  color: var(--text);
+  color: var(--text-light);
+  font-size: 0.95rem;
 }
 
 .login-footer a {
@@ -108,8 +124,16 @@
   font-weight: 700;
 }
 
+.login-footer a:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 480px) {
   .login-container {
     padding: 30px 20px;
+  }
+
+  .login-header h1 {
+    font-size: 1.6rem;
   }
 }
